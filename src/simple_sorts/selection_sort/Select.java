@@ -1,4 +1,4 @@
-package selection_sort;
+package simple_sorts.selection_sort;
 
 public class Select {
 

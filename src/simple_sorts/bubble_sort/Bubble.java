@@ -1,4 +1,4 @@
-package bubble_sort;
+package simple_sorts.bubble_sort;
 
 public class Bubble {
 
