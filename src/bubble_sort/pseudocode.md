@@ -1,15 +1,15 @@
 BubbleSort( int a[], int n)
 Begin
-    for i = 1 to n-1
-        sorted = true
-        for j = 0 to n-1-i
+    for i = 0 to n-1
+        swapped = false
+        for j = 0 to n-1
             if a[j] > a[j+1]
                 temp = a[j]
                 a[j] = a[j+1]
                 a[j+1] = temp
-                sorted = false
+                swapped = true
         end for
-        if sorted
+        if swapped
             break from i loop
     end for
 End
