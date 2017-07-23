@@ -9,7 +9,7 @@ Begin
                 a[j+1] = temp
                 swapped = true
         end for
-        if swapped
+        if not swapped
             break from i loop
     end for
 End
