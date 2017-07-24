@@ -4,7 +4,7 @@ public class MergeSort {
 
     public static void main(String[] args) {
 
-        int[] array = {123, 45, 36, 8888, 0, 23423, 23423423, 856, 45};
+        int[] array = {0, 123, 45, 36, 8888, 0, 23423, 23423423, 856, 45};
 
         int n = array.length;
         int left = 0;

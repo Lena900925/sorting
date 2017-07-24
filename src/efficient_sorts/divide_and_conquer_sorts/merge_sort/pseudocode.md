@@ -19,7 +19,10 @@ function mergeSort( var a as array, var left as int, var right as int )
 function merge( var a as array, var left as int, var middle as int, var right as int)
    //find sizes of the sub arrays
    var n1 as number of left half
+   n1 = middle - left + 1
+      
    var n2 as number of right half
+   n2 = right - middle
 
    //create temp arrays
    var Left and Right as array 
