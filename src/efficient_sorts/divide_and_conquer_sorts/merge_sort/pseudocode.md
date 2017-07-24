@@ -5,12 +5,15 @@ function main(Strings[] args)
    
 function mergeSort( var a as array, var left as int, var right as int )
    
-   var middle as int = left+right/2
+   var middle as int = (left+right)/2
    
    if ( left < right ) 
        mergeSort left sub array
+       mergeSort(a, left, middle)
        mergeSort right sub array
+       mergeSort(a, middle+1, right)
        merge the sub arrays
+       merge(a, left, middle, right)
    end if
 
 function merge( var a as array, var left as int, var middle as int, var right as int)
