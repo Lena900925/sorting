@@ -3,7 +3,7 @@ function main(Strings[] args)
    var right as int = n-1
    mergeSort(array, left, right)
    
-function mergeSort( var a as array )
+function mergeSort( var a as array, var left as int, var right as int )
    
    var middle as int = left+right/2
    
