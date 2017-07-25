@@ -3,44 +3,46 @@ package efficient_sorts.divide_and_conquer_sorts.quick_sort;
 public class QuickSort {
 
     public static void main(String[] args) {
-        int[] arr1 = {123,512,5,1,989898,121};
-        int left = 0;
-        int right = arr1.length - 1;
-        partition(arr1, left, right);
-        quickSort(arr1, left, right);
+        int[] arr1 = {123, 512, 5, 1, 989898, 121};
+        int low = 0;
+        int high = arr1.length - 1;
+        quickSort(arr1, low, high);
         for (int i : arr1) {
             System.out.println(i);
         }
     }
 
-    static int partition(int arr[], int left, int right)
-    {
-        int i = left, j = right;
-        int tmp;
-        int pivot = arr[(left + right) / 2];
+    public static void quickSort(int[] arr, int low, int high) {
+        if (arr == null || arr.length == 0)
+            return;
+        if (low >= high)
+            return;
+        // pick the pivot
+        int middle = low + (high - low) / 2;
+        int pivot = arr[middle];
 
+        // make left < pivot and right > pivot
+        int i = low, j = high;
         while (i <= j) {
-            while (arr[i] < pivot)
+            while (arr[i] < pivot) {
                 i++;
-            while (arr[j] > pivot)
+            }
+            while (arr[j] > pivot) {
                 j--;
+            }
             if (i <= j) {
-                tmp = arr[i];
+                int temp = arr[i];
                 arr[i] = arr[j];
-                arr[j] = tmp;
+                arr[j] = temp;
                 i++;
                 j--;
             }
-        };
-
-        return i;
+        }
+        // recursively sort two sub parts
+        if (low < j)
+            quickSort(arr, low, j);
+        if (high > i)
+            quickSort(arr, i, high);
     }
 
-    static void quickSort(int arr[], int left, int right) {
-        int index = partition(arr, left, right);
-        if (left < index - 1)
-            quickSort(arr, left, index - 1);
-        if (index < right)
-            quickSort(arr, index, right);
-    }
 }
