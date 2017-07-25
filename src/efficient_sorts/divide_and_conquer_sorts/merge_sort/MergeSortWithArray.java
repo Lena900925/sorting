@@ -1,6 +1,6 @@
 package efficient_sorts.divide_and_conquer_sorts.merge_sort;
 
-public class MergeSort {
+public class MergeSortWithArray {
 
     public static void main(String[] args) {
 
