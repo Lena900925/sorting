@@ -1,6 +1,6 @@
 package efficient_sorts.divide_and_conquer_sorts.quick_sort;
 
-public class QuickSort {
+public class QuickSortWithArray {
 
     public static void main(String[] args) {
         int[] arr1 = {123, 512, 5, 1, 989898, 121, 1};
