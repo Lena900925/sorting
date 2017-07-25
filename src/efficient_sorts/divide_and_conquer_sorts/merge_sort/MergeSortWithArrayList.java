@@ -11,10 +11,6 @@ public class MergeSortWithArrayList {
         // Use the tests to check your code!
         List<Integer> toSort = Arrays.asList(1,2345,234,84,22222);
 
-        int n = toSort.size();
-        int left = 0;
-        int right = n - 1;
-
         MergeSortWithArrayList mergeSortObject = new MergeSortWithArrayList();
         mergeSortObject.sort(toSort);
         for (int i : toSort) {
