@@ -3,7 +3,7 @@ package efficient_sorts.divide_and_conquer_sorts.quick_sort;
 public class QuickSort {
 
     public static void main(String[] args) {
-        int[] arr1 = {123, 512, 5, 1, 989898, 121};
+        int[] arr1 = {123, 512, 5, 1, 989898, 121, 1};
         int low = 0;
         int high = arr1.length - 1;
         quickSort(arr1, low, high);
@@ -18,7 +18,7 @@ public class QuickSort {
         if (low >= high)
             return;
         // pick the pivot
-        int middle = low + (high - low) / 2;
+        int middle = (low + high) / 2;
         int pivot = arr[middle];
 
         // make left < pivot and right > pivot
